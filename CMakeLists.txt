@@ -19,3 +19,5 @@ find_package(SFML COMPONENTS system window graphics audio network REQUIRED)
 
 include_directories(D:/Code/Libraries/SFML/include)
 target_link_libraries(${PROJECT_NAME} sfml-system sfml-window sfml-graphics sfml-audio)
+
+file(COPY "assets" DESTINATION "/")
