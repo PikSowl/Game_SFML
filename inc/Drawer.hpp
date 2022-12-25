@@ -27,6 +27,7 @@ namespace ps
         vector<sf::Texture> tileTextures;
 
         void Start();
+        void Generate();
         void Draw(sf::RenderWindow &window);
         void TryToFlick();
         void Victory(sf::RenderWindow &window);

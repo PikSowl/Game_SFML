@@ -1,7 +1,6 @@
 #include <Drawer.hpp>
-#include <cstdlib>
+#include <experimental/random>
 #include <iostream>
-#include <ctime>
 #include <vector>
 #include <SFML/Graphics.hpp>
 
@@ -34,14 +33,19 @@ namespace ps
             tiles.at(i).scale(scale,scale);
         }
 
-        srand(time(nullptr));
+        Generate();
+        Draw(window);
+    }
+
+    void Engine::Generate (){
+        std::experimental::reseed();
         int a, b;
         for(int i = 1; i < 16; i++)
             grid[(i-1)%4][((i-1)/4)%4] = 0;
 
         for(int i = 1; i < 16; i++) {
-            a = rand() % 4;
-            b = rand() % 4;
+            a = std::experimental::randint(0, 3);
+            b = std::experimental::randint(0, 3);
             if (grid[a][b] == 0){
                 grid[a][b] = i;
                 tiles.at(i).setPosition(scale*(1 + a*6), scale*(1 + b*6));
@@ -49,27 +53,12 @@ namespace ps
             else i--;
         }
         int loyd = 0;
-        for (int i = 0; i < 16; i++){
-            for (int j = i+1; j < 16; j++){
-                if(grid[(i)%4][((i)/4)%4] > grid[(j)%4][((j)/4)%4]) loyd++;
+        for (int i = 0; i < 16; i++) {
+            for (int j = i + 1; j < 16; j++) {
+                if (grid[(i) % 4][((i) / 4) % 4] > grid[(j) % 4][((j) / 4) % 4]) loyd+=1;
             }
         }
-        if (loyd%2!=0) {
-            for (int i = 0; i < 16; i++){
-                for (int j = i+1; j < 16; j++){
-                    if(grid[i%4][(i/4)%4] > grid[j%4][(j/4)%4]){
-                        tiles.at(j).setPosition(scale*(1 + (i%4)*6), scale*(1 + int(i/4)%4)*6);
-                        tiles.at(i).setPosition(scale*(1 + (j%4)*6), scale*(1 + int(j/4)%4)*6);
-                        int temp = grid[(i)%4][((i)/4)%4];
-                        grid[(i)%4][((i)/4)%4] = grid[(j)%4][((j)/4)%4];
-                        grid[(j)%4][((j)/4)%4] = temp;
-                        break;
-                    }
-                }
-            }
-        }
-
-        Draw(window);
+        if (loyd%2!=0) Generate();
     }
 
     void Engine::Draw(sf::RenderWindow &window){
