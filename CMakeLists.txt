@@ -10,5 +10,12 @@ set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 include_directories("inc/")
 
 add_executable("${PROJECT_NAME}" main.cpp
-        inc/Func.h
-        src/Func.cpp)
+        inc/Drawer.hpp
+        src/Drawer.cpp)
+
+set(SFML_STATIC_LIBRARIES TRUE)
+set(SFML_DIR D:/Code/Libraries/SFML/lib/cmake/SFML)
+find_package(SFML COMPONENTS system window graphics audio network REQUIRED)
+
+include_directories(D:/Code/Libraries/SFML/include)
+target_link_libraries(${PROJECT_NAME} sfml-system sfml-window sfml-graphics sfml-audio)
