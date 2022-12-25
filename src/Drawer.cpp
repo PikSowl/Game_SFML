@@ -5,9 +5,6 @@
 #include <vector>
 #include <SFML/Graphics.hpp>
 
-using std::cin;
-using std::cout;
-using std::endl;
 using std::string;
 using std::vector;
 
@@ -45,7 +42,6 @@ namespace ps
         for(int i = 1; i < 16; i++) {
             a = rand() % 4;
             b = rand() % 4;
-            cout << 1;
             if (grid[a][b] == 0){
                 grid[a][b] = i;
                 tiles.at(i).setPosition(scale*(1 + a*6), scale*(1 + b*6));
@@ -107,10 +103,8 @@ namespace ps
     }
 
     void Engine::TryToFlick(){
-        cout << vx - 1 << "<" << mx << "<"<< vx + 1 << " : " << vy - 1 << "<" << my << "<"<< vy + 1 << " : ";
         if ((vx-1<=mx && vx+1>=mx && vy-1<=my && vy+1>=my)&&(vx==mx || vy==my)&&!(vx==mx && vy==my)){
             int num = grid[mx][my];
-            cout << num << endl;
             tiles.at(num).setPosition(scale*(1 + 6*vx), scale*(1 + 6*vy));
             grid[vx][vy] = num;
             vx = mx;
