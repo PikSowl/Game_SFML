@@ -1,0 +1,8 @@
+# ninja log v5
+4	2457	6936957092445043	CMakeFiles/Game_SFML.dir/main.cpp.obj	40edf939c13776b9
+3	1431	6936957563720428	CMakeFiles/Game_SFML.dir/src/Drawer.cpp.obj	592ea12c05a354fa
+1432	1693	6936957566290272	Game_SFML.exe	63edd3e5abe4e13b
+0	236	6936957849028615	build.ninja	1cb43211be33dd78
+4	845	6936957858179138	CMakeFiles/Game_SFML.dir/main.cpp.obj	7ab8de18fcc1a5c4
+8	1339	6936957863114174	CMakeFiles/Game_SFML.dir/src/Drawer.cpp.obj	242fc9b6557b33b9
+1340	1582	6936957865471078	Game_SFML.exe	63edd3e5abe4e13b

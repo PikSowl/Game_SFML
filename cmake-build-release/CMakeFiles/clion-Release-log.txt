@@ -1,0 +1,5 @@
+"D:\stuf\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Release "-DCMAKE_MAKE_PROGRAM=D:/stuf/CLion 2022.3.1/bin/ninja/win/ninja.exe" -G Ninja -S D:\Code\Progects\Testing\Game_SFML -B D:\Code\Progects\Testing\Game_SFML\cmake-build-release
+-- Found SFML 2.5.1 in D:/Code/Libraries/SFML/lib/cmake/SFML
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/Code/Progects/Testing/Game_SFML/cmake-build-release
