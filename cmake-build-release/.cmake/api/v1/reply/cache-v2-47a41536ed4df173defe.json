@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "d:/Code/Progects/Testing/Game_SFML/cmake-build-release"
+			"value" : "d:/Code/Progects/Game_SFML/cmake-build-release"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -575,7 +575,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Code/Progects/Testing/Game_SFML/cmake-build-release/CMakeFiles/pkgRedirects"
+			"value" : "D:/Code/Progects/Game_SFML/cmake-build-release/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -647,7 +647,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/Code/Progects/Testing/Game_SFML"
+			"value" : "D:/Code/Progects/Game_SFML"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1295,7 +1295,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Code/Progects/Testing/Game_SFML/cmake-build-release"
+			"value" : "D:/Code/Progects/Game_SFML/cmake-build-release"
 		},
 		{
 			"name" : "Game_SFML_IS_TOP_LEVEL",
@@ -1319,7 +1319,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Code/Progects/Testing/Game_SFML"
+			"value" : "D:/Code/Progects/Game_SFML"
 		},
 		{
 			"name" : "Ogg_LIB",
